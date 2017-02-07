@@ -46,48 +46,12 @@ $folder = str_replace('INBOX.', '', stripslashes($arr[1]));
 if($folder !== 'INBOX'){
     krsort($list);
 }
-
-//make sure the list is an array
-if (is_array($list)) {
-
-     //loop through rach array index
-     foreach ($list as $val) {
-
-        //remove  any } charactors from the folder
-        if (preg_match("/}/i", $val)) {
-            $arr = explode('}', $val);
-        }
-
-        //also remove the ] if it exists, normally Gmail have them
-        if (preg_match("/]/i", $val)) {
-            $arr = explode(']/', $val);
-        }
-
-        //remove any slashes
-        $folder = trim(stripslashes($arr[1]));
-
-        //remove inbox. from the folderName its not needed for displaying purposes
-        $folderName = str_replace('INBOX.', '', $folder);
-
-        $Folders= ucwords(strtolower(imap_utf7_decode($folderName)));
-
-
-//        echo "<p>".ucwords(strtolower(imap_utf7_decode($folderName)))."</p>";
-	
-
-    }
-
-} else {
-    echo "Folders not currently available";
-}
-
-?>
-
+?> 
 
 <html>
 
 <head>
-    <title>Folder Fetch 0.1</title>
+    <title>Folderfetch'd 0.1</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.css">
     <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
@@ -151,6 +115,10 @@ if (is_array($list)) {
 }
 
 ?>
+	<div class="rs-inner">
+	<a href="index.html"> <--- Back </a>
+	</div>
+
                     </div>
                 </div>
             </div>
