@@ -53,7 +53,7 @@ if($folder !== 'INBOX'){
 <head>
     <title>Folderfetch'd 0.1</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/canon.css">
     <script type="application/javascript" src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
     <script type="application/javascript" src="https://eafdbc63c97ce6bec9ef-b0a668e5876bef6fe25684caf71db405.ssl.cf1.rackcdn.com/v1-latest/canon.min.js"></script>
 </head>
@@ -89,9 +89,15 @@ if($folder !== 'INBOX'){
                                 Folderfetch'd for
                                 <?php echo $email; ?>:
                            </h2>
+
+<hr>
                                 <p style="font-style: italic;"> <b>folder.subfolder</b> = subfolder </p>
                                 <p style="font-style: italic;"> <b style='color: red'>RED</b> = contains special character(s) </p>
+
+<hr>
+
                            </div>
+
 
 <?php if (is_array($list)) {
 
@@ -137,7 +143,7 @@ if($folder !== 'INBOX'){
 ?>
 	<div class="rs-inner">
 	
-	<a href="/" class="rs-btn">Back</a> 
+	<a href="/" class="rs-btn">Another!</a> 
 	</div>
 
                     </div>
