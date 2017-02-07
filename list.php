@@ -1,17 +1,17 @@
-
 <?php
-
+// Set variables from the HTML form
 $email = $_POST['email'];
 $pass = $_POST['pass'];
 $server = $_POST['server'];
-
+// Set a new variable adding brackets to host value
 $host_server = "{ $server }";
-
+// Remove the spaces added in previous variable because I'm not smart enoguh to do this all at once. 
 $thehost = str_replace(' ', '', $host_server);
 
-
+// Creat connection and authenticate to IMAP server
 $mbox = imap_open("$thehost", $email, $pass)or die(imap_last_error())or die("can't connect: ".imap_last_error());
 
+//Gather list of folders the user has
 $list = imap_list($mbox, "$thehost", "*");
 
 //remove  any } characters from the folder
